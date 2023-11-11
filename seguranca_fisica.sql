@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11/11/2023 às 17:47
+-- Tempo de geração: 11/11/2023 às 18:05
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -35,18 +35,6 @@ CREATE TABLE `cameras` (
   `Deleted` binary(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Despejando dados para a tabela `cameras`
---
-
-INSERT INTO `cameras` (`ID`, `Modelo`, `IP`, `Resolucao`, `Deleted`) VALUES
-(1, 'Intelbras', '192.168.0.1', '420p', 0x30),
-(2, 'Intelbras', '192.168.0.2', '720p', 0x31),
-(3, 'Intelbras', '192.168.0.3', '720p', 0x30),
-(4, 'Intelbras', '192.168.0.4', '720p', 0x31),
-(5, 'Intelbras', '192.168.0.5', '420p', 0x31),
-(6, 'Intelbras', '192.168.0.6', '420p', 0x30);
-
 -- --------------------------------------------------------
 
 --
@@ -61,18 +49,6 @@ CREATE TABLE `localidade` (
   `ID_camera` int(100) NOT NULL,
   `Deleted` binary(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `localidade`
---
-
-INSERT INTO `localidade` (`ID`, `Local`, `Ambiente`, `Cidade`, `ID_camera`, `Deleted`) VALUES
-(7, 'Rainha Guilhermina', 'Porta principal', 'Vitória', 3, 0x30),
-(8, 'Rainha Guilhermina', 'Porta Hall', 'Vitória', 1, 0x30),
-(9, 'Vogue', 'Porta Principal', 'Vitória', 5, 0x30),
-(10, 'Vogue', 'Porta Hall', 'Vitória', 6, 0x30),
-(11, 'Ilhas do pacifico', 'porta principal', 'vila velha', 4, 0x31),
-(12, 'Ilhas do pacifico', 'garagem', 'vila velha', 2, 0x31);
 
 --
 -- Índices para tabelas despejadas
@@ -99,13 +75,13 @@ ALTER TABLE `localidade`
 -- AUTO_INCREMENT de tabela `cameras`
 --
 ALTER TABLE `cameras`
-  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `localidade`
 --
 ALTER TABLE `localidade`
-  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restrições para tabelas despejadas
