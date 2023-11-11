@@ -1,4 +1,4 @@
-Esta é uma API simples, desenvolvida em Node.js usando o framework Express para criar um CRUD básico em um bando de dados MySQL.
+Esta é uma API simples, desenvolvida em Node.js usando o framework Express para criar um CRUD básico em um banco de dados MySQL.
 
 Requisitos:
 	- Node.js instalado.
