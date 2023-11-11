@@ -1,0 +1,29 @@
+Esta é uma API simples, desenvolvida em Node.js usando o framework Express para criar um CRUD básico em um bando de dados MySQL.
+
+Requisitos:
+	- Node.js instalado.
+	- Banco de dados em MySQL configurado.
+	
+Configuração:
+	- Clonar ou baixar o repositório na máquina
+	- No terminal navegar até o diretorio do projeto
+	- Instalar as dependencias >> "npm install"
+	- Configurar as credenciais do banco de dados
+Uso:
+	- Iniciar o servidor >> node API.js
+	- A API estará disponível em http://localhost:3000
+	- Rotas disponiveis
+		- POST /items 
+		   Cria um novo registro na tabela de banco de dados
+		   Requer um arquivo no formato json com os campos:{ Modelo, IP, Resolucao, Deleted }
+		- GET /items
+		   Retorna com todos os registros da tabela 
+		- GET /items/:id
+		   Retorna os dados com base no ID fornecido
+		- PUT /items/:id
+		   Atualiza um registro com base no ID fornecido
+		   Requer um arquivo no formato json com os campos{ Modelo, IP, Resolucao, Deleted }
+		- PUT /items/:id/Deleted
+		    Atualiza o registro da coluna 'deleted' que cumpre a função do Soft Deleted ( Omite a informação na tabela, sem necessariamente excluir o registro )
+		    Requer um campo'novoValor' no corpo da requisição (sendo  1 ou 0 ).
+		
